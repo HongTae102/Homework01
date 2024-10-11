@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.7 on win32)" generated="2024-10-11T14:33:49.790370" rpa="false" schemaversion="5">
+<suite id="s1" name="Homework1" source="C:\Work\Python\homework01\homework1.robot">
+<test id="s1-t1" name="Test" line="13">
+<kw name="Test case">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-11T14:33:49.966305" level="INFO">${USER_CSV_FILE} = C:WorkPythonhomework01userData.CSV</msg>
+<var>${USER_CSV_FILE}</var>
+<arg>${userCSV}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-11T14:33:49.966305" elapsed="0.000000"/>
+</kw>
+<kw name="Read Csv File To Associative" owner="CSVLibrary">
+<msg time="2024-10-11T14:33:49.966809" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:WorkPythonhomework01userData.CSV'</msg>
+<var>${USER_DATA_CSV}</var>
+<arg>${USER_CSV_FILE}</arg>
+<doc>Read CSV file and return its content as a Python list of dictionaries.</doc>
+<status status="FAIL" start="2024-10-11T14:33:49.966305" elapsed="0.000504">FileNotFoundError: [Errno 2] No such file or directory: 'C:WorkPythonhomework01userData.CSV'</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${user}</var>
+<arg>${USER_DATA_CSV}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.966809" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.966809" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Login page">
+<status status="NOT RUN" start="2024-10-11T14:33:49.966809" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="user-name"]</arg>
+<arg>${user}[username]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="password"]</arg>
+<arg>${user}[password]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//*[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Shopping Page">
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Add to cart">
+<arg>${product.p1}</arg>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Add to cart">
+<arg>${product.p3}</arg>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Add to cart">
+<arg>${product.p6}</arg>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[@class="shopping_cart_link fa-layers fa-fw"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Cart page">
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[contains(text(),"CHECKOUT")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Checkout page">
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="first-name"]</arg>
+<arg>${user}[fname]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="last-name"]</arg>
+<arg>${user}[lname]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.967808" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="postal-code"]</arg>
+<arg>00001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.968830" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//input[@value="CONTINUE"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.968830" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Preview page">
+<status status="NOT RUN" start="2024-10-11T14:33:49.968830" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[contains(text(),"FINISH")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.968830" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Finish page">
+<status status="NOT RUN" start="2024-10-11T14:33:49.968830" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[contains(text(),"THANK YOU FOR YOUR ORDER")]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-10-11T14:33:49.968830" elapsed="0.000000"/>
+</kw>
+<arg>C:\Work\Python\homework01\userData.CSV</arg>
+<status status="FAIL" start="2024-10-11T14:33:49.965294" elapsed="0.003536">FileNotFoundError: [Errno 2] No such file or directory: 'C:WorkPythonhomework01userData.CSV'</status>
+</kw>
+<status status="FAIL" start="2024-10-11T14:33:49.964220" elapsed="0.005114">FileNotFoundError: [Errno 2] No such file or directory: 'C:WorkPythonhomework01userData.CSV'</status>
+</test>
+<status status="FAIL" start="2024-10-11T14:33:49.792138" elapsed="0.177196"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Homework1">Homework1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-11T14:33:49.963204" level="ERROR">Error in file 'C:\Work\Python\homework01\homework1.robot' on line 7: Variable file 'C:WorkPythonhomework01productData.yaml' does not exist.</msg>
+<msg time="2024-10-11T14:33:49.964220" level="ERROR">Error in file 'C:\Work\Python\homework01\homework1.robot' on line 8: Variable file 'C:WorkPythonhomework01data.yaml' does not exist.</msg>
+</errors>
+</robot>
